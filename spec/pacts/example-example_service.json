@@ -1,0 +1,33 @@
+{
+  "consumer": {
+    "name": "example"
+  },
+  "provider": {
+    "name": "example service"
+  },
+  "interactions": [
+    {
+      "description": "a requst for json data",
+      "provider_state": "get user with id 1",
+      "request": {
+        "method": "get",
+        "path": "/api/v1/users/1"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "code": 0,
+          "data": {
+            "_id": 1,
+            "phone": "13800138000"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecificationVersion": "1.0.0"
+  }
+}
