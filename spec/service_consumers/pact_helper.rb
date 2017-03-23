@@ -1,4 +1,5 @@
 require 'pact/provider/rspec'
+require 'provider'
 
 Pact.provider_states_for "example" do
 
@@ -12,8 +13,10 @@ end
 
 Pact.service_provider "example service" do
 
+  app { Provider }
+
   honours_pact_with 'example service' do
-    pact_uri ''
+    pact_uri './spec/pacts/example-example_service.json'
   end
 
 end
